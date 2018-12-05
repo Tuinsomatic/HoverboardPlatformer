@@ -14,6 +14,7 @@ public class ObstacleAction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        rigb.AddForce(1, 0, 0);
+        rigb.AddForce(4, 0, 0);
+        Destroy(gameObject, 4);
 	}
 }

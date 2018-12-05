@@ -20,8 +20,11 @@ public class Obstacle : MonoBehaviour {
 
     IEnumerator Generate()
     {
-        randone = Random.Range(2, 29);
-        Instantiate(obst, new Vector3(-30, randone, 5.06f), rot.transform.rotation);
-        yield return new WaitForSeconds(2.0f);
+        for(; ; )
+        {
+            randone = Random.Range(2, 29);
+            Instantiate(obst, new Vector3(-30, randone, 5.06f), rot.transform.rotation);
+            yield return new WaitForSeconds(2);
+        }   
     }
 }
