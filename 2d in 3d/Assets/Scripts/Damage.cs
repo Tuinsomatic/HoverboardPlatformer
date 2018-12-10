@@ -6,15 +6,19 @@ public class Damage : MonoBehaviour {
 
     public int health = 100;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public GameObject explosion;
+    private Transform spawnpoint;
+
+    // Use this for initialization
+    void Start () {
+        spawnpoint = gameObject.transform;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (health < 0)
         {
+            Instantiate(explosion, spawnpoint.position, spawnpoint.rotation);
             Destroy(gameObject);
         }
 	}
