@@ -7,6 +7,7 @@ public class Obstacle : MonoBehaviour {
     public GameObject obst;
     public GameObject rot;
     private int randone;
+    public GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,9 @@ public class Obstacle : MonoBehaviour {
         {
             randone = Random.Range(2, 29);
             Instantiate(obst, new Vector3(-30, randone, 5.06f), rot.transform.rotation);
-            yield return new WaitForSeconds(2);
+            Instantiate(obst, new Vector3(-30, player.transform.position.y, 5.06f), rot.transform.rotation);
+            yield return new WaitForSeconds(1);
+
         }   
     }
 }
