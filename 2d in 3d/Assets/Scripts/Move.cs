@@ -8,7 +8,7 @@ public class Move : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        transform.position = new Vector3(23.74f, 17.08f, 5.06f);
+        transform.position = new Vector3(18.14f, 17.08f, 5.06f);
         rigb = this.GetComponent<Rigidbody>();
 	}
 	

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4475562595942714}
   - component: {fileID: 198700913433396332}
   - component: {fileID: 199856346096655314}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 135301171397927464}
   - component: {fileID: 114418599150646658}
   - component: {fileID: 114796492293565812}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
