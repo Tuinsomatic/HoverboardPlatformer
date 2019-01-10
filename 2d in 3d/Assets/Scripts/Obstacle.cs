@@ -9,14 +9,8 @@ public class Obstacle : MonoBehaviour {
     private int randone;
     public GameObject player;
 
-	// Use this for initialization
 	void Start () {
         StartCoroutine("Generate");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     IEnumerator Generate()
@@ -27,7 +21,7 @@ public class Obstacle : MonoBehaviour {
             Instantiate(obst, new Vector3(-30, randone, 5.06f), rot.transform.rotation);
             Instantiate(obst, new Vector3(-30, player.transform.position.y, 5.06f), rot.transform.rotation);
             yield return new WaitForSeconds(1);
-
+            //Every second, 2 Crusherballs are spawned. One is on the same Y level as the player and the other is at a random Y level.
         }   
     }
 }

@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Hoverboard Platformer");
+        SceneManager.LoadScene("Hoverboard Platformer"); //Starts a new game
     }
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu"); //Ends the current game, and goes back to the title screen
     }
 }

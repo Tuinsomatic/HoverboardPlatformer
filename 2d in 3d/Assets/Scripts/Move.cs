@@ -7,25 +7,23 @@ public class Move : MonoBehaviour {
     public Rigidbody rigb;
     public AudioSource aud;
 
-	// Use this for initialization
 	void Start () {
-        transform.position = new Vector3(18.14f, 17.08f, 5.06f);
+        transform.position = new Vector3(18.14f, 17.08f, 5.06f); //starting position
         rigb = this.GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey("left"))
         {
-            rigb.AddForce(-4, 0, 0);
+            rigb.AddForce(-4, 0, 0); //gradually add force to the left
         }
         if (Input.GetKey("right"))
         {
-            rigb.AddForce(4, 0, 0);
+            rigb.AddForce(4, 0, 0); //gradually add force to the right
         }
-        if (Input.GetKey("up"))
+        if (Input.GetKey("up")) 
         {
-            rigb.AddForce(0, 20, 0);
+            rigb.AddForce(0, 20, 0); //gradually add force upwards NB there is no control for down - part of the challenge is to let gravity do the work
         }
         if (Input.GetKeyDown("space"))
         {
@@ -35,7 +33,7 @@ public class Move : MonoBehaviour {
             }
             else
             {
-                aud.Play();
+                aud.Play(); //Toggle audio if it gets too annoying ;)
             }
 
         }

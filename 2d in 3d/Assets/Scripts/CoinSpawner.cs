@@ -20,10 +20,10 @@ public class CoinSpawner : MonoBehaviour
         for (; ; )
         {
             randx = Random.Range(-20, 15);
-            randy = Random.Range(2, 29);
+            randy = Random.Range(2, 20);
             Instantiate(coin, new Vector3(randx, randy, 5.06f), coin.transform.rotation);
             yield return new WaitForSeconds(10);
-
+            //Makes a new coin somewhere random on the map every 10 seconds.
         }
     }
 }

@@ -10,18 +10,16 @@ public class Damage : MonoBehaviour {
     public GameObject explosion;
     private Transform spawnpoint;
 
-    // Use this for initialization
     void Start () {
         spawnpoint = gameObject.transform;
     }
 	
-	// Update is called once per frame
 	void Update () {
 		if (health < 0)
         {
-            Instantiate(explosion, spawnpoint.position, spawnpoint.rotation);
+            Instantiate(explosion, spawnpoint.position, spawnpoint.rotation); //player explodes if on 0 health
             Destroy(gameObject);
-            gameOver = true;
+            gameOver = true; //used to trigger the "GAME OVER" text appearing
         }
 	}
 
@@ -29,11 +27,11 @@ public class Damage : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Obstacle")
         {
-            health -= 5;
+            health -= 5; //-5 health for touching a Crusherball
         }
         else if (collision.gameObject.tag == "Ground")
         {
-            health -= 10;
+            health -= 10; //-10 health for touching the ground
         }
     }
 }
