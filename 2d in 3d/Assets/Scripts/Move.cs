@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour {
 
     public Rigidbody rigb;
+    public AudioSource aud;
 
 	// Use this for initialization
 	void Start () {
@@ -26,5 +27,25 @@ public class Move : MonoBehaviour {
         {
             rigb.AddForce(0, 20, 0);
         }
+        if (Input.GetKeyDown("space"))
+        {
+            if (aud.isPlaying)
+            {
+                aud.Stop();
+            }
+            else
+            {
+                aud.Play();
+            }
+
+        }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.name == "right")
+    //    {
+    //        rigb.AddForce(-16, 0, 0);
+    //    }
+    //}
 }

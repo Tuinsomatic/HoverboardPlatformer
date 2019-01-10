@@ -5,6 +5,7 @@ using UnityEngine;
 public class Damage : MonoBehaviour {
 
     public int health = 100;
+    public bool gameOver = false;
 
     public GameObject explosion;
     private Transform spawnpoint;
@@ -20,6 +21,7 @@ public class Damage : MonoBehaviour {
         {
             Instantiate(explosion, spawnpoint.position, spawnpoint.rotation);
             Destroy(gameObject);
+            gameOver = true;
         }
 	}
 
